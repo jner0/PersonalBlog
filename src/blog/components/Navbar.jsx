@@ -14,15 +14,16 @@ import {
 import { react, logo } from "../../assets";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavListDrawer } from "./NavListDrawer";
+import { Navigate } from "react-router-dom";
 
 const navLinks = [
   {
     title: "HOME",
-    path: "#home",
+    path: "/",
   },
   {
     title: "BIOGRAFÍA",
-    path: "#biografia",
+    path: "/jose-nemecio-rodriguez",
   },
 ];
 
@@ -30,7 +31,7 @@ export const NavBar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Container fixed>
           <Toolbar>
             {/* <IconButton
