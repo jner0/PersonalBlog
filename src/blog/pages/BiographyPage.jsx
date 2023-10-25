@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 // Importa el hook useTheme de Material-UI
 import { useTheme } from "@mui/material/styles";
 import { NavBar } from "../components";
+import { Exchange1, Exchange2, family4, familyAll } from "../../assets";
 
 export const BiographyPage = () => {
   const theme = useTheme();
@@ -50,6 +51,42 @@ export const BiographyPage = () => {
             </p>
 
             {/* Fotos familia */}
+            <Box
+              pb={2}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={family4}
+                alt="family4"
+                style={{
+                  width: "70%",
+                  height: "auto",
+                  display: "block",
+                }}
+              />
+            </Box>
+
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={familyAll}
+                alt="familyAll"
+                style={{
+                  width: "70%",
+                  height: "auto",
+                  display: "block",
+                }}
+              />
+            </Box>
 
             <p>
               A mis 17 años tuve la oportunidad de realizar un intercambio
@@ -61,6 +98,41 @@ export const BiographyPage = () => {
             </p>
 
             {/* Fotos Intercambio */}
+            <Box
+              pb={2}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={Exchange1}
+                alt="familyAll"
+                style={{
+                  width: "70%",
+                  height: "auto",
+                  display: "block",
+                }}
+              />
+            </Box>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={Exchange2}
+                alt="familyAll"
+                style={{
+                  width: "70%",
+                  height: "auto",
+                  display: "block",
+                }}
+              />
+            </Box>
 
             <p>
               En el año 2014 empiezan mis estudios universitarios y la etapa en
