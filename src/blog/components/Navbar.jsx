@@ -25,6 +25,10 @@ const navLinks = [
     title: "BIOGRAFÍA",
     path: "/jose-nemecio-rodriguez",
   },
+  {
+    title: "LOGIN",
+    path: "",
+  },
 ];
 
 export const NavBar = () => {
