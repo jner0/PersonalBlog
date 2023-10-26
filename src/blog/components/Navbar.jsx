@@ -27,7 +27,7 @@ const navLinks = [
   },
   {
     title: "LOGIN",
-    path: "",
+    path: "/auth/login",
   },
 ];
 
