@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { BiographyPage, BlogPage } from "../pages";
+import { BiographyPage, BlogPage, CreatePost } from "../pages";
 import { useEffect } from "react";
 
 export const BlogRoutes = () => {
@@ -7,6 +7,7 @@ export const BlogRoutes = () => {
     <Routes>
       <Route path="/jose-nemecio-rodriguez" element={<BiographyPage />} />
       <Route path="/" element={<BlogPage />} />
+      <Route path="/create-post" element={<CreatePost />} />
 
       <Route path="/*" element={<Navigate to="/jose-nemecio-rodriguez" />} />
     </Routes>
