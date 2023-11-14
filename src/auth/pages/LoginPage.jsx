@@ -1,6 +1,24 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
+import { useForm } from "../../hooks/useForm";
+import { useDispatch } from "react-redux";
+import { startLogin } from "../../store";
+
+const formData = {
+  correo: "",
+  password: "",
+};
 
 export const LoginPage = () => {
+  const dispatch = useDispatch();
+  const { correo, password, onInputChange } = useForm(formData);
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    // console.log({ email, password });
+    dispatch(startLogin({ correo, password }));
+  };
+
   return (
     <Grid
       container
@@ -25,7 +43,10 @@ export const LoginPage = () => {
           Login
         </Typography>
 
-        <form className="animate__animated animate__fadeIn animate__faster">
+        <form
+          onSubmit={onSubmit}
+          className="animate__animated animate__fadeIn animate__faster"
+        >
           <Grid container>
             <Grid item xs={12} sx={{ mt: 2 }}>
               <TextField
@@ -33,9 +54,9 @@ export const LoginPage = () => {
                 type="email"
                 placeholder="correo@gmail.com"
                 fullWidth
-                name="email"
-                // value={email}
-                // onChange={onInputChange}
+                name="correo"
+                value={correo}
+                onChange={onInputChange}
               />
             </Grid>
             <Grid item xs={12} sx={{ mt: 2 }}>
@@ -45,8 +66,8 @@ export const LoginPage = () => {
                 placeholder="Contraseña"
                 fullWidth
                 name="password"
-                // value={password}
-                // onChange={onInputChange}
+                value={password}
+                onChange={onInputChange}
               />
             </Grid>
 
